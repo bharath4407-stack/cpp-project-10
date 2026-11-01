@@ -1,0 +1,2 @@
+# state|title|startTime|endTime
+OPEN|General Election (Simulation)|2026-10-18 19:30:20|-

@@ -1,0 +1,2 @@
+# adminId|name|passwordHash
+admin|System Administrator|2cf2ac5361ea3253

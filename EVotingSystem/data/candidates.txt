@@ -1,0 +1,5 @@
+# candidateId|name|party|symbol|age|manifesto
+C101|Arjun Mehta|Progress Alliance|Sun|45|Better roads, reliable power and affordable housing for all.
+C102|Lakshmi Devi|Green Future Party|Tree|52|Clean energy, urban forests and zero-waste campuses.
+C103|Sameer Khan|Unity Front|Bridge|38|Free public Wi-Fi, open data and support for local startups.
+C104|Neha Kapoor|Citizens First|Lamp|41|Transparent budgets, quality schools and community healthcare.

@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.10)
+project(EVotingSystem CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+file(GLOB SOURCES src/*.cpp)
+add_executable(evoting ${SOURCES})
+target_include_directories(evoting PRIVATE include)
+if(MSVC)
+  target_compile_options(evoting PRIVATE /W4 /utf-8)
+else()
+  target_compile_options(evoting PRIVATE -Wall -Wextra -Wpedantic)
+  if(WIN32)
+    # MinGW: link the C++ runtime statically so evoting.exe does not depend on
+    # libstdc++-6.dll / libgcc_s_seh-1.dll being found on PATH at run time
+    # (a wrong toolchain's copy makes the program exit silently with code 127).
+    if(CMAKE_VERSION VERSION_GREATER_EQUAL 3.13)
+      target_link_options(evoting PRIVATE -static-libgcc -static-libstdc++ -static)
+    else()
+      set_target_properties(evoting PROPERTIES LINK_FLAGS "-static-libgcc -static-libstdc++ -static")
+    endif()
+  endif()
+endif()

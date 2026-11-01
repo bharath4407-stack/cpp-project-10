@@ -1,0 +1,137 @@
+(Lines starting with ">>" show what the user typed. Colours are not shown here.)
+
+############################  1. MAIN MENU  ############################
+======================================================================
+                           E-VOTING SYSTEM
+                LOCAL SIMULATION - for education only
+======================================================================
+  Election status: NOT STARTED
+----------------------------------------------------------------------
+  1. Voter Login
+  2. Voter Registration
+  3. Admin Login
+  4. Election Information
+  5. Exit
+----------------------------------------------------------------------
+  Enter your choice (1-5): >> abc
+  [ERROR] Invalid input. Please enter a whole number between 1 and 5.
+  Enter your choice (1-5): >> 4
+
+======================================================================
+                         ELECTION INFORMATION
+======================================================================
+  Title              : General Election (Simulation)
+  Status             : NOT STARTED
+  Started at         : -
+  Ended at           : -
+  Candidates         : 4
+  Registered voters  : 10
+----------------------------------------------------------------------
+  Rules: one vote per voter | voters must log in | voting only while OPEN
+         results are shown only after the election is CLOSED
+
+############################  2. VOTER REGISTRATION  ###################
+======================================================================
+                          VOTER REGISTRATION
+======================================================================
+  Demo only - do NOT enter real personal information.
+
+  Full name            : >> 123
+  [ERROR] 2-40 characters; letters, spaces, . - ' only.
+  Full name            : >> Maya Pillai
+  Age (18-120)         : >> 17
+  [ERROR] Invalid input. Please enter a whole number between 18 and 120.
+  Age (18-120)         : >> 27
+  Password (6-32 chars): >> secret99
+  Confirm password     : >> secret99
+  Voter ID (Enter = auto-generate, or choose 4-12 letters/digits): >> (Enter)
+  [OK] Registration complete!
+
+  Your Voter ID is: V1011   (remember it - you need it to log in)
+
+############################  3. CASTING A VOTE  #######################
+======================================================================
+                            CAST YOUR VOTE
+======================================================================
+
+  ID     | Name                   | Party/Group            | Symbol       | Age
+  ------------------------------------------------------------------
+  C101   | Arjun Mehta            | Progress Alliance      | Sun          |  45
+  C102   | Lakshmi Devi           | Green Future Party     | Tree         |  52
+  C103   | Sameer Khan            | Unity Front            | Bridge       |  38
+  C104   | Neha Kapoor            | Citizens First         | Lamp         |  41
+
+  Enter Candidate ID to vote for (0 = cancel): >> 999
+  [ERROR] Invalid candidate ID. Please choose an ID from the list above.
+
+  Enter Candidate ID to vote for (0 = cancel): >> 102
+----------------------------------------------------------------------
+  Candidate ID : C102
+  Name         : Lakshmi Devi
+  Party/Group  : Green Future Party
+  Symbol       : Tree
+  Age          : 52
+  Manifesto    : Clean energy, urban forests and zero-waste
+                 campuses.
+----------------------------------------------------------------------
+  Confirm your vote for Lakshmi Devi (Green Future Party)?  This CANNOT be changed. (y/n): >> y
+
+  +----------------------------------------------------+
+  |  VOTE RECORDED SUCCESSFULLY                        |
+  |  Receipt No: RCP-20261018-E4BDF51C                 |
+  +----------------------------------------------------+
+  [INFO] Write this receipt down. It is shown only once and is not linked to your choice.
+
+############################  4. RULE ENFORCEMENT  #####################
+  (same voter tries again)
+  [ERROR] You have already voted. Each voter may vote only once.
+
+  (voting before the election starts)
+  [ERROR] Voting has not started yet. Please come back when the election is OPEN.
+
+  (admin asks for results while the election is OPEN)
+  [ERROR] Results are available only after the election is CLOSED (now OPEN).
+
+  (admin tries to add a candidate while OPEN)
+  [ERROR] Adding candidates is only allowed while the election is NOT STARTED (now OPEN).
+
+  (3 wrong passwords)
+  [ERROR] Invalid Voter ID or password. (attempt 3 of 3)
+  [ERROR] Too many failed attempts. Returning to the main menu.
+
+############################  5. FINAL RESULTS  ########################
+======================================================================
+                        FINAL ELECTION RESULTS
+                    General Election (Simulation)
+======================================================================
+  Candidate Name         | Party                  | Votes | Percentage
+  ------------------------------------------------------------------
+  Lakshmi Devi           | Green Future Party     |     4 |     44.44%
+  Arjun Mehta            | Progress Alliance      |     3 |     33.33%
+  Neha Kapoor            | Citizens First         |     1 |     11.11%
+  Sameer Khan            | Unity Front            |     1 |     11.11%
+
+  Total registered voters : 10
+  Total votes cast        : 9
+  Votes not cast          : 1
+  Voter turnout           : 90.00%
+
+  WINNER: Lakshmi Devi (Green Future Party) with 4 vote(s)
+
+======================================================================
+                           VOTES BAR CHART
+======================================================================
+  Lakshmi Devi           ██████████████████████████████ 4
+  Arjun Mehta            ███████████████████████        3
+  Neha Kapoor            ████████                       1
+  Sameer Khan            ████████                       1
+
+############################  6. AUDIT LOG (admin)  ####################
+  2026-10-18 10:02:11  SYSTEM_START          first run - demo data created
+  2026-10-18 10:02:30  VOTER_REGISTERED      V1011
+  2026-10-18 10:02:41  LOGIN_OK              admin admin
+  2026-10-18 10:02:44  ELECTION_STARTED      11 voters, 4 candidates
+  2026-10-18 10:03:02  LOGIN_OK              voter V1011
+  2026-10-18 10:03:15  VOTE_CAST             voter V1011
+  2026-10-18 10:03:20  LOGIN_FAILED          voter login, id entered: V1001
+  (note: the log records WHO voted, never WHAT they voted for)

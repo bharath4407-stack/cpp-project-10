@@ -1,0 +1,15 @@
+# voterId|name|age|passwordHash|hasVoted(0/1)
+V1001|Aarav Sharma|25|7e17ca84fb70a4ae|1
+V1002|Priya Reddy|31|6e3ff1f9694dd3d7|1
+V1003|Rahul Verma|22|1096798b78c4a728|1
+V1004|Sneha Iyer|28|88e6e578006afb79|1
+V1005|Karthik Rao|45|f4f9a76297b59a92|0
+V1006|Ananya Das|19|9408dac4ec19676b|0
+V1007|Vikram Singh|38|cf68190cec77a62c|0
+V1008|Meera Nair|52|4304c3705a7e8c4d|0
+V1009|Rohan Gupta|29|023bb31bf03e0c46|0
+V1010|Divya Menon|34|8af5995129f51338|0
+V1011|Test User|30|7172d657e5141f12|1
+V1012|bjkbhg|18|fb6c27ee8e4e100d|0
+V1013|bharath|19|048dd44ffdb247e7|1
+V1014|bharath|19|6b4269dc2cde1b8d|1
